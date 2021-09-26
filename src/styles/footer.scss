@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: darkslateblue;
+  color: white;
+
+  &__social {
+    font-size: 2rem;
+    &__icon {
+        margin-left: 2rem;
+    }
+  }
+}
