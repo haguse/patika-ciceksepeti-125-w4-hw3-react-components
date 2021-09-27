@@ -1,6 +1,11 @@
 import React from "react";
 import "../styles/card.scss";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineStar,
+  AiFillEdit,
+  AiFillDelete,
+} from "react-icons/ai";
 
 const Card = ({ card }) => {
   const fillStars = card.stars % 5;
@@ -36,6 +41,10 @@ const Card = ({ card }) => {
           </div>
         </div>
         <p>{card.description.slice(0, 200)}.</p>
+      </div>
+      <div className="card__operations">
+        <AiFillEdit className="card__operations__ope card__operations__edit"/>
+        <AiFillDelete className="card__operations__ope card__operations__delete"/>
       </div>
     </div>
   );

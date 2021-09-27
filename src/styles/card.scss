@@ -45,4 +45,21 @@
   & p {
     text-align: center;
   }
+
+  &__operations {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    &__ope {
+      margin-right: 1rem;
+      color: darkslateblue;
+      cursor: pointer;
+      &:hover {
+        color: orange;
+      }
+    }
+
+    &__delete:hover {
+      color: red;
+    }
+  }
 }
