@@ -9,7 +9,11 @@
   &__social {
     font-size: 2rem;
     &__icon {
-        margin-left: 2rem;
+      color: white;
+      margin-left: 2rem;
+      &:hover {
+        color: orange;
+      }
     }
   }
 }

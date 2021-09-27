@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/footer.scss"
+import "../styles/footer.scss";
 import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
@@ -10,8 +10,16 @@ const Footer = () => {
         <p>Halit Guven Serin</p>
       </div>
       <div className="footer__social">
-        <FaGithubAlt className="footer__social__icon"/>
-        <FaLinkedinIn className="footer__social__icon"/>
+        <a href="https://github.com/haguse" target="_blank" rel="noreferrer">
+          <FaGithubAlt className="footer__social__icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/halitguvenserin/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedinIn className="footer__social__icon" />
+        </a>
       </div>
     </div>
   );
