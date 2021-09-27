@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/card.scss";
 import {
   AiFillStar,
@@ -7,11 +7,14 @@ import {
   AiFillDelete,
 } from "react-icons/ai";
 
-const Card = ({ card }) => {
+const Card = ({ card, deleteCard }) => {
+  // Calculate Stars for faker's numbers
   const fillStars = card.stars % 5;
   const outlineStars = 5 - fillStars;
   const fillStarsArray = [];
   const outlineStarsArray = [];
+
+  // Push Stars
   for (let i = 0; i < fillStars; i++) {
     fillStarsArray.push(<AiFillStar />);
   }
@@ -19,7 +22,13 @@ const Card = ({ card }) => {
     outlineStarsArray.push(<AiOutlineStar />);
   }
 
+  // Delete Card
+  const handleDelete = (id) => {
+    deleteCard(id);
+  };
+
   return (
+    // Card
     <div className="card">
       <img src={card.image} alt="Card" />
       <div className="card__category">
@@ -42,9 +51,16 @@ const Card = ({ card }) => {
         </div>
         <p>{card.description.slice(0, 200)}.</p>
       </div>
+
+   
+
+      {/* Delete and Edit Buttons */}
       <div className="card__operations">
-        <AiFillEdit className="card__operations__ope card__operations__edit"/>
-        <AiFillDelete className="card__operations__ope card__operations__delete"/>
+        <AiFillEdit className="card__operations__ope card__operations__edit" />
+        <AiFillDelete
+          onClick={() => handleDelete(card.id)}
+          className="card__operations__ope card__operations__delete"
+        />
       </div>
     </div>
   );
