@@ -4,9 +4,9 @@ You can view a live demo over at
 
 In this project, I fetch the fake data I created via MockApi.
 
-![Homepage](/public/homepage.png)
-![editCard](/public/editCard.png)
-![deleteCard](/public/deleteCard.png)
+![Homepage](/public/images/homepage.png)
+![editCard](/public/images/editCard.png)
+![deleteCard](/public/images/deleteCard.png)
 
 
 ## Getting Started with Create React App
