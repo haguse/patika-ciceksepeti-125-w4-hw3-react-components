@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/card.scss";
 import {
   AiFillStar,
@@ -7,7 +7,7 @@ import {
   AiFillDelete,
 } from "react-icons/ai";
 
-const Card = ({ card, deleteCard }) => {
+const Card = ({ card, deleteCard, editCard }) => {
   // Calculate Stars for faker's numbers
   const fillStars = card.stars % 5;
   const outlineStars = 5 - fillStars;
@@ -25,6 +25,11 @@ const Card = ({ card, deleteCard }) => {
   // Delete Card
   const handleDelete = (id) => {
     deleteCard(id);
+  };
+
+  // Edit Card
+  const handleEdit = (id) => {
+    editCard(id);
   };
 
   return (
@@ -52,11 +57,12 @@ const Card = ({ card, deleteCard }) => {
         <p>{card.description.slice(0, 200)}.</p>
       </div>
 
-   
-
       {/* Delete and Edit Buttons */}
       <div className="card__operations">
-        <AiFillEdit className="card__operations__ope card__operations__edit" />
+        <AiFillEdit
+          onClick={() => handleEdit(card.id)}
+          className="card__operations__ope card__operations__edit"
+        />
         <AiFillDelete
           onClick={() => handleDelete(card.id)}
           className="card__operations__ope card__operations__delete"
