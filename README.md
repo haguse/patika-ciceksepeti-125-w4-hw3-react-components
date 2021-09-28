@@ -1,7 +1,5 @@
 ## Patika.dev - Ciceksepeti React Bootcamp Homework 3
 
-You can view a live demo over at 
-
 In this project, I fetch the fake data I created via MockApi.
 
 <img src="public/images/homepage.png" alt="homepage" width="200"/>
