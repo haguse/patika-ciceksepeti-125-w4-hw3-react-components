@@ -5,8 +5,8 @@ You can view a live demo over at
 In this project, I fetch the fake data I created via MockApi.
 
 <img src="public/images/homepage.png" alt="homepage" width="200"/>
-<img src="public/images/editCard.png" alt="edit" width="200"/>
-<img src="public/images/deleteCard.png" alt="delete" width="200"/>
+<img src="public/images/editCard.png" alt="edit" width="350" height="350"/>
+<img src="public/images/deleteCard.png" alt="delete" width="350" height="350"/>
 
 
 
