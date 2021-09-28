@@ -4,7 +4,7 @@ You can view a live demo over at
 
 In this project, I fetch the fake data I created via MockApi.
 
-![Homepage](/public/images/homepage.png)
+<img src="public/images/homepage.png" alt="drawing" width="200"/>
 ![editCard](/public/images/editCard.png)
 ![deleteCard](/public/images/deleteCard.png)
 
