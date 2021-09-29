@@ -49,10 +49,22 @@ const CardList = () => {
         `<p>Old Text : ${text} </p><input placeholder="New Text" id="swal-input2" class="swal2-input">`,
       focusConfirm: false,
       preConfirm: () => {
-        return [
-          document.getElementById("swal-input1").value,
-          document.getElementById("swal-input2").value,
-        ];
+        if (
+          document.getElementById("swal-input1").value !== "" ||
+          document.getElementById("swal-input2").value !== ""
+        ) {
+          return [
+            document.getElementById("swal-input1").value,
+            document.getElementById("swal-input2").value,
+          ];
+        } else {
+          document.getElementById("swal-input1").value = "Default Title";
+          document.getElementById("swal-input2").value = "Default Text";
+          return [
+            document.getElementById("swal-input1").value,
+            document.getElementById("swal-input2").value,
+          ];
+        }
       },
     });
 
