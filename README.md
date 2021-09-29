@@ -2,6 +2,8 @@
 
 In this project, I fetch the fake data I created via MockApi.
 
+You can view a live demo over at https://haguse-patika-ciceksepeti-125-bc-hw-3.vercel.app/
+
 <img src="public/images/homepage.png" alt="homepage" width="200"/>
 <img src="public/images/editCard.png" alt="edit" width="450" height="400"/>
 <img src="public/images/deleteCard.png" alt="delete" width="450" height="400"/>
