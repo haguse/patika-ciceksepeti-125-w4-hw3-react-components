@@ -28,8 +28,8 @@ const Card = ({ card, deleteCard, editCard }) => {
   };
 
   // Edit Card
-  const handleEdit = (id) => {
-    editCard(id);
+  const handleEdit = (id, title, text) => {
+    editCard(id, title, text);
   };
 
   return (
@@ -60,7 +60,7 @@ const Card = ({ card, deleteCard, editCard }) => {
       {/* Delete and Edit Buttons */}
       <div className="card__operations">
         <AiFillEdit
-          onClick={() => handleEdit(card.id)}
+          onClick={() => handleEdit(card.id, card.title, card.description)}
           className="card__operations__ope card__operations__edit"
         />
         <AiFillDelete

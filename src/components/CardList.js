@@ -40,13 +40,13 @@ const CardList = () => {
   };
 
   // Edit Card Function
-  const editCard = async (id, newTitle, newDescription) => {
+  const editCard = async (id, title, text) => {
     // Edit Card Input Area
     const { value: formValues } = await Swal.fire({
       title: "Edit Card",
       html:
-        '<p>New Title : </p><input id="swal-input1" class="swal2-input">' +
-        '<p>New Text : </p><input id="swal-input2" class="swal2-input">',
+        `<p>Old Title : ${title}</p><input placeholder="New Title" id="swal-input1" class="swal2-input">` +
+        `<p>Old Text : ${text} </p><input placeholder="New Text" id="swal-input2" class="swal2-input">`,
       focusConfirm: false,
       preConfirm: () => {
         return [
