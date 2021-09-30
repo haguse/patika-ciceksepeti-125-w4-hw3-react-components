@@ -7,7 +7,7 @@ import {
   AiFillDelete,
 } from "react-icons/ai";
 
-const Card = ({ card, deleteCard, editCard }) => {
+const Card = ({ card, deleteCard, editCard, truncateCardText }) => {
   // Calculate Stars for faker's numbers
   const fillStars = card.stars % 5;
   const outlineStars = 5 - fillStars;
@@ -35,26 +35,29 @@ const Card = ({ card, deleteCard, editCard }) => {
   return (
     // Card
     <div className="card">
-      <img src={card.image} alt="Card" />
-      <div className="card__category">
-        <span>{card.category}</span>
-      </div>
-      <div className="card__body">
-        <p className="card__title">{card.title.toUpperCase()}</p>
-        <div className="card__info">
-          <div className="card__stars">
-            {fillStarsArray.map((star, index) => {
-              return <span key={index}>{star}</span>;
-            })}
-            {outlineStarsArray.map((star, index) => {
-              return <span key={index}>{star}</span>;
-            })}
-          </div>
-          <div>
-            <p>{card.review} reviews</p>
-          </div>
+      <div>
+        <img src={card.image} alt="Card" />
+        <div className="card__category">
+          <span>{card.category}</span>
         </div>
-        <p>{card.description.slice(0, 200)}.</p>
+        <div className="card__body">
+          <p className="card__title">{card.title.toUpperCase()}</p>
+          <div className="card__info">
+            <div className="card__stars">
+              {fillStarsArray.map((star, index) => {
+                return <span key={index}>{star}</span>;
+              })}
+              {outlineStarsArray.map((star, index) => {
+                return <span key={index}>{star}</span>;
+              })}
+            </div>
+            <div>
+              <p>{card.review} reviews</p>
+            </div>
+          </div>
+          {/* <p>{card.description.slice(0, 150)} ...</p> */}
+          <p>{truncateCardText(card.description, 200)}</p>
+        </div>
       </div>
 
       {/* Delete and Edit Buttons */}

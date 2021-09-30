@@ -1,0 +1,13 @@
+.swal2-input {
+  margin-bottom: 0.6rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .swal2-text {
+    font-size: 0.9rem !important;
+  }
+  .swal2-input {
+    width: 13rem !important;
+    font-size: 0.9rem !important;
+  }
+}

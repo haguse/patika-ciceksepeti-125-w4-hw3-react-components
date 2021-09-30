@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import "../styles/cardList.scss";
+import "../styles/modals.scss";
 import Swal from "sweetalert2";
 
 const CardList = () => {
   const [cards, setCards] = useState([]);
+
+  // Truncate Card Text
+  const truncateCardText = (string, maxLength) => {
+    if (!string) return null;
+    if (string.length <= maxLength) return string;
+    return `${string.substring(0, maxLength)} ...`;
+  };
 
   // Fetch Data
   useEffect(() => {
@@ -45,8 +53,8 @@ const CardList = () => {
     const { value: formValues } = await Swal.fire({
       title: "Edit Card",
       html:
-        `<p>Old Title : ${title}</p><input placeholder="New Title" id="swal-input1" class="swal2-input">` +
-        `<p>Old Text : ${text} </p><input placeholder="New Text" id="swal-input2" class="swal2-input">`,
+        `<p class="swal2-text">Old Title : ${title}</p><input placeholder="New Title" id="swal-input1" class="swal2-input">` +
+        `<p class="swal2-text">Old Text : ${text} </p><input placeholder="New Text" id="swal-input2" class="swal2-input">`,
       focusConfirm: false,
       preConfirm: () => {
         if (
@@ -100,6 +108,7 @@ const CardList = () => {
               card={card}
               deleteCard={deleteCard}
               editCard={editCard}
+              truncateCardText= {truncateCardText}
             />
           );
         })}
