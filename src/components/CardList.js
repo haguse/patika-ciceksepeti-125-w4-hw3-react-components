@@ -53,7 +53,7 @@ const CardList = () => {
     const { value: formValues } = await Swal.fire({
       title: "Edit Card",
       html:
-        `<p class="swal2-text">Old Title : ${title}</p><input placeholder="New Title" id="swal-input1" class="swal2-input">` +
+        `<input placeholder="${title}" id="swal-input1" class="swal2-input">` +
         `<p class="swal2-text">Old Text : ${text} </p><input placeholder="New Text" id="swal-input2" class="swal2-input">`,
       focusConfirm: false,
       preConfirm: () => {
